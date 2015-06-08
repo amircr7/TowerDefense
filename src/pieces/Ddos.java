@@ -18,6 +18,6 @@ public Ddos(Case case) throws IOexception{
 	this.freezeResistance = 0;
 	this.dropRessources = 150;
 	
-	super(case, ImageIO.read(new File("Images/ddos.jpg")), "Ddos");
+	super(case, ImageIO.read(new File("Images/ddos.png")), "Ddos");
 }
 }
