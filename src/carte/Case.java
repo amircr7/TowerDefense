@@ -27,45 +27,25 @@ public class Case {
     	        } catch ( SQLException ignore ) {
     	        }
     	}	
-		System.out.println(carte);
+		// System.out.println(carte); pour tester
 		return carte;
 	}
 	
 	public static void StringToTab (String carte) {
-		char tabCarte[][] = new char[20][20];
-		for (int i=0; i<20; i++) {
-			for (int j=0; j<20; j++) {
-				for (int a=0; a<carte.length(); a++) {
-					tabCarte[i][j] = carte.charAt(a);
-				}
-			}
+		char tabCarte2d[][] = new char[20][20];
+		char tabCarte1d_temp[] = new char[20];
+		String temp;
+		int beginIndex = 0;
+		int endIndex = 20;
+		for (int i=0; i<20; ++i) {
+			temp = carte.substring(beginIndex, endIndex);
+			tabCarte1d_temp = temp.toCharArray();
+			tabCarte2d[i] = tabCarte1d_temp;
+			// pareil en plus court: tabCarte2d[i] = carte.substring(beginIndex, endIndex).toCharArray();
+			beginIndex = beginIndex+21; // 21 parce que ya virgule qu'on veut pas recuperer gros naze
+			endIndex = endIndex+21;
+			//System.out.println(tabCarte[i]); pour tester
 		}
-	System.out.println(tabCarte);
 	}
 	
 }
-
-/*File file = new File("maps/Map1.txt");
-        Scanner inputFile = new Scanner(file);
-        this.cases = new Case[20][20];
-
-
-        int a = 0;
-        while(inputFile.hasNext()){
-            //read line and convert to char[]; store it.
-            array[a] = inputFile.nextLine().toCharArray();
-
-            //if there are more lines, increment the size of the array.
-            if (inputFile.hasNext()){
-                //create a clone array of the same length.
-                char[][] clone = new char[array.length][];
-                //copy elements from the array to the clone. Note that this can be
-                //done by index with a for loop
-                System.arraycopy(array, 0, clone, 0, array.length);
-                //make array a new array with an extra char[]
-                array = new char[array.length + 1][];
-                //copy elements back.
-                System.arraycopy(clone, 0, array, 0, clone.length);
-                a++;
-            }
-        }*/
