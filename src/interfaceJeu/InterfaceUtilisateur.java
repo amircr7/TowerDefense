@@ -1,4 +1,4 @@
-package configuration;
+package interfaceJeu;
 
 public interface InterfaceUtilisateur {
 
