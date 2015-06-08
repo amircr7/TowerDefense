@@ -19,7 +19,7 @@ public class Case {
     	    ResultSet resultat = statement.executeQuery( "SELECT carte FROM carteinit WHERE idCarte = "+idCarte+";" );
     	    resultat.next() ;
     	    carte = resultat.getString("carte");
-    	    System.out.println(carte);
+    	    // System.out.println(carte);
     	    
 		} catch ( SQLException e ) {
 	    /* Gérer les éventuelles erreurs ici */
