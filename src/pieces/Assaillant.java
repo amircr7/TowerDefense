@@ -12,7 +12,7 @@ public abstract class Assaillant {
 
 
 
-	public Case genererAssaillantRandom()
+	public AssaillantSpawn genererAssaillantRandom()
 	{
 		switch (hasard.nextInt(nombreAssaillant)) {
 		case 0:
