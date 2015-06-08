@@ -32,18 +32,20 @@ public class Case {
 	}
 	
 	public static void StringToTab (String carte) {
-		char tabCarte2d[][] = new char[20][20];
-		char tabCarte1d_temp[] = new char[20];
+		int largeur = 20;
+		int hauteur = 20;
+		char tabCarte2d[][] = new char[hauteur][largeur];
+		char tabCarte1d_temp[] = new char[largeur];
 		String temp;
 		int beginIndex = 0;
-		int endIndex = 20;
-		for (int i=0; i<20; ++i) {
+		int endIndex = largeur;
+		for (int i=0; i<hauteur; ++i) {
 			temp = carte.substring(beginIndex, endIndex);
 			tabCarte1d_temp = temp.toCharArray();
 			tabCarte2d[i] = tabCarte1d_temp;
 			// pareil en plus court: tabCarte2d[i] = carte.substring(beginIndex, endIndex).toCharArray();
-			beginIndex = beginIndex+21; // 21 parce que ya virgule qu'on veut pas recuperer gros naze
-			endIndex = endIndex+21;
+			beginIndex = beginIndex + largeur + 1; // +1 parce que ya virgule qu'on veut pas recuperer gros naze
+			endIndex = endIndex + largeur + 1;
 			//System.out.println(tabCarte[i]); pour tester
 		}
 	}
