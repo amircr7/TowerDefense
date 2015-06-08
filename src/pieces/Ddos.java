@@ -1,8 +1,12 @@
 package pieces;
 
+import java.io.File;
+
+import javax.imageio.ImageIO;
+
 public class Ddos extends Assaillant{
 
-public Ddos(){
+public Ddos(Case case) throws IOexception{
 	this.enemyName = "Ddos";
 	this.enemyHealth = 150;
 	this.enemyDamage = 25;
@@ -14,5 +18,6 @@ public Ddos(){
 	this.freezeResistance = 0;
 	this.dropRessources = 150;
 	
+	super(case, ImageIO.read(new File("Images/ddos.jpg")), "Ddos");
 }
 }
