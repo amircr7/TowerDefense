@@ -1,8 +1,12 @@
 package pieces;
 
+import java.io.File;
+
+import javax.imageio.ImageIO;
+
 public class Trojan extends Assaillant{
 
-public Trojan(){
+public Trojan(Case case) throws IOexception{
 	this.enemyName = "Trojan";
 	this.enemyHealth = 100;
 	this.enemyDamage = 20;
@@ -13,5 +17,7 @@ public Trojan(){
 	this.slowResistance = 0;
 	this.freezeResistance = 0;
 	this.dropRessources = 100;
+	
+	super(case, ImageIO.read(new File("Images/trojan.png")), "Trojan");
 }
 }
