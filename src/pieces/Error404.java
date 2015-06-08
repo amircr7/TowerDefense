@@ -1,5 +1,9 @@
 package pieces;
 
+import java.io.File;
+
+import javax.imageio.ImageIO;
+
 public class Error404 extends Assaillant{
 
 public Error404(Case case) throws IOexception{
