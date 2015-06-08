@@ -5,7 +5,8 @@ import java.sql.*;
 public class Case {
 	
 	public char tableauCarte[][] = new char[20][20];
-	public String recuperationStringCarte (int idCarte) {
+	
+	public static String recuperationStringCarte (int idCarte) {
 		String url = "jdbc:mysql://localhost:3306/towerdefense";
 		String utilisateur = "root";
 		String motDePasse = "";
@@ -17,7 +18,6 @@ public class Case {
     	    ResultSet resultat = statement.executeQuery( "SELECT carte FROM carteinit WHERE idCarte = "+idCarte+";" );
     	    resultat.next() ;
     	    carte = resultat.getString("carte");
-    	    // System.out.println(carte);
     	    
 		} catch ( SQLException e ) {
 		} finally {
@@ -26,19 +26,21 @@ public class Case {
     	            connexion.close();
     	        } catch ( SQLException ignore ) {
     	        }
-    	}		
+    	}	
+		System.out.println(carte);
 		return carte;
 	}
 	
-	
-	
-	public String StringToTab(String carte){
-		
-		for(char i = 0; i != ','; i++){
-			i = tableauCarte[20][20];
+	public static void StringToTab (String carte) {
+		char tabCarte[][] = new char[20][20];
+		for (int i=0; i<20; i++) {
+			for (int j=0; j<20; j++) {
+				for (int a=0; a<carte.length(); a++) {
+					tabCarte[i][j] = carte.charAt(a);
+				}
+			}
 		}
-		return tableauCarte[20][20];
-
+	System.out.println(tabCarte);
 	}
 	
 }
