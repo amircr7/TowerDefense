@@ -1,12 +1,14 @@
 package interfaceJeu;
 
 import javax.swing.JFrame;
-import javax.swing.JPanel;
+
 
 
 
 public class AffichageFenetre extends JFrame{
 
+	
+	private static final long serialVersionUID = 1L;
 	private final AffichagePanneau affichagePanneau;
 
 	public AffichageFenetre(final int largeur, final int hauteur, final AffichageCases affichageCases[][]) {
