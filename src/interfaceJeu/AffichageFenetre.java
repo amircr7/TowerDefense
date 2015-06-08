@@ -4,7 +4,6 @@ import javax.swing.JFrame;
 
 
 
-
 public class AffichageFenetre extends JFrame{
 
 	
@@ -12,8 +11,8 @@ public class AffichageFenetre extends JFrame{
 	private final AffichagePanneau affichagePanneau;
 
 	public AffichageFenetre(final int largeur, final int hauteur, final AffichageCases affichageCases[][]) {
-		this.setTitle("Plateau de jeu");
-		this.setSize(700, 700);
+		this.setTitle("TowerDefense");
+		this.setSize(1500, 1000);
 		this.setLocationRelativeTo(null);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.affichagePanneau = new AffichagePanneau(largeur, hauteur, affichageCases);

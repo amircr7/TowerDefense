@@ -7,7 +7,9 @@ import javax.swing.JPanel;
 public class AffichagePanneau extends JPanel {
 
 	
-	private static final long serialVersionUID = -3618605287900763008L;
+	
+	
+	private static final long serialVersionUID = 1L;
 	private final AffichageCases affichageCases[][];
 	private final ArrayList<AffichagePieces> pieces;
 	private final int largeur;

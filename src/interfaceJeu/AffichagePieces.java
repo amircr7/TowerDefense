@@ -1,5 +1,8 @@
 package interfaceJeu;
 
-public interface AffichagePieces {
+public interface AffichagePieces extends AffichageCases{
 
+	public int getPositionHorizontale();
+
+	public int getPositionVerticale();
 }
