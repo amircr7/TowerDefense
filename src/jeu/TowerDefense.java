@@ -1,11 +1,12 @@
 package jeu;
-import interfaceJeu.AffichageFenetre;
+import interfaceJeu.Affichage;
+
 
 public class TowerDefense {
 
 	public static void main(String[] args) {
 		
-		AffichageFenetre fen = new AffichageFenetre(0, 0, null);
+		Affichage fen = new Affichage(0, 0, null);
 	}
 
 }
