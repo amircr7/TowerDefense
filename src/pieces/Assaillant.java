@@ -28,4 +28,7 @@ public abstract class Assaillant {
 		}
 	
 	}
+	
+	
+	
 }

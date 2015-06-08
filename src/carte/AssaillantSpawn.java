@@ -14,6 +14,7 @@ public class AssaillantSpawn implements AffichageCases{
 		this.vide = vide;
 	}
 
+	
 	public Boolean estVide() {
 		return this.vide;
 	}
@@ -22,7 +23,6 @@ public class AssaillantSpawn implements AffichageCases{
 
 	@Override
 	public Image getImage() {
-		// TODO Auto-generated method stub
 		return this.image;
 	}
 }

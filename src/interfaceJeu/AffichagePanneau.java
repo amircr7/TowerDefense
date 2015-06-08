@@ -8,7 +8,6 @@ public class AffichagePanneau extends JPanel {
 
 	
 	
-	
 	private static final long serialVersionUID = 1L;
 	private final AffichageCases affichageCases[][];
 	private final ArrayList<AffichagePieces> pieces;
