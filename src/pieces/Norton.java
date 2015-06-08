@@ -13,4 +13,7 @@ public Norton(){
 	this.tourHealth = 100;
 	
 }
+public void attackTour(){
+	
+}
 }

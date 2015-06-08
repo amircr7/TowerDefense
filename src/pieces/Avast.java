@@ -13,4 +13,7 @@ public class Avast extends Tour{
 		this.tourRange = 4;
 		this.tourHealth = 100;
 	}
+	public void attackTour(){
+		
+	}
 }

@@ -13,4 +13,7 @@ public Avira(){
 	this.tourRange = 3;
 	this.tourHealth = 100;
 }
+public void attackTour(){
+	
+}
 }

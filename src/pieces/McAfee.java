@@ -13,4 +13,7 @@ public McAfee(){
 	this.tourRange = 3;
 	this.tourHealth = 100;
 }
+public void attackTour(){
+	
+}
 }
