@@ -1,8 +1,20 @@
 package carte;
+import java.awt.Image;
 
+
+
+import java.awt.image.BufferedImage;
 import java.sql.*;
 
 public class Case {
+	
+	protected Image image;
+	protected Boolean vide;
+	
+	public Case(){
+		image = null;
+		vide = null;
+	}
 	
 	public static String recuperationStringCarte (int idCarte) {
 		String url = "jdbc:mysql://localhost:3306/towerdefense";
@@ -44,8 +56,28 @@ public class Case {
 			// pareil en plus court: tabCarte[i] = carte.substring(beginIndex, endIndex).toCharArray();
 			beginIndex = beginIndex + largeur + 1; // +1 parce que ya virgule qu'on ne veut pas recuperer
 			endIndex = endIndex + largeur + 1;
-			System.out.println(tabCarte[i]); // pour tester
+			//System.out.println(tabCarte[i]); // pour tester
 		}
 	}
-	
+	public Case(Image image, int statut){
+		switch(statut){
+		
+		case 0 : 
+		EmplacementTour();
+		break;
+		case 1 :
+		Chemin();
+		break;
+		case 2 :
+		AssaillantSpawn();
+		break;
+		case 3 :
+		EmplacementPosteTravail();
+		break;
+		case 4 :
+		Decors();
+		break;
+		}
+	}
+
 }

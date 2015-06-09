@@ -1,28 +1,10 @@
 package carte;
-
-import interfaceJeu.AffichageCases;
-
 import java.awt.Image;
 
-public class AssaillantSpawn implements AffichageCases{
+public class AssaillantSpawn extends Case{
 
-	protected Image image;
-	protected Boolean vide;
+public AssaillantSpawn(Image image){
+	super(image, 2);
+}
 
-	public AssaillantSpawn(final Image image, final Boolean vide) {
-		this.image = image;
-		this.vide = vide;
-	}
-
-	
-	public Boolean estVide() {
-		return this.vide;
-	}
-
-	
-
-	@Override
-	public Image getImage() {
-		return this.image;
-	}
 }
