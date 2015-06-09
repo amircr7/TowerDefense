@@ -13,7 +13,7 @@ public class Case {
 		try {
 		    connexion = DriverManager.getConnection( url, utilisateur, motDePasse );
     	    Statement statement = connexion.createStatement();
-    	    ResultSet resultat = statement.executeQuery( "SELECT carte FROM carteinit WHERE idCarte = "+idCarte+";" );
+    	    ResultSet resultat = statement.executeQuery( "SELECT carte FROM carte WHERE idCarte = "+idCarte+";" );
     	    resultat.next() ;
     	    carte = resultat.getString("carte");
     	    
