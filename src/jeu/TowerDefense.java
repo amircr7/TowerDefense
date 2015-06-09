@@ -1,8 +1,8 @@
 package jeu;
 
-import interfaceJeu.AffichageFenetre;
+// import interfaceJeu.AffichageFenetre;
 import carte.Case;
-import interfaceJeu.Affichage;
+// import interfaceJeu.Affichage;
 
 public class TowerDefense {
 	

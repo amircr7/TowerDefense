@@ -4,8 +4,6 @@ import java.sql.*;
 
 public class Case {
 	
-	public char tableauCarte[][] = new char[20][20];
-	
 	public static String recuperationStringCarte (int idCarte) {
 		String url = "jdbc:mysql://localhost:3306/towerdefense";
 		String utilisateur = "root";
@@ -27,14 +25,14 @@ public class Case {
     	        } catch ( SQLException ignore ) {
     	        }
     	}	
-		// System.out.println(carte); pour tester
+		// System.out.println(carte); // pour tester
 		return carte;
 	}
 	
 	public static void StringToTab (String carte) {
 		int largeur = 20;
 		int hauteur = 20;
-		char tabCarte2d[][] = new char[hauteur][largeur];
+		char tabCarte[][] = new char[hauteur][largeur];
 		char tabCarte1d_temp[] = new char[largeur];
 		String temp;
 		int beginIndex = 0;
@@ -42,11 +40,11 @@ public class Case {
 		for (int i=0; i<hauteur; ++i) {
 			temp = carte.substring(beginIndex, endIndex);
 			tabCarte1d_temp = temp.toCharArray();
-			tabCarte2d[i] = tabCarte1d_temp;
-			// pareil en plus court: tabCarte2d[i] = carte.substring(beginIndex, endIndex).toCharArray();
+			tabCarte[i] = tabCarte1d_temp;
+			// pareil en plus court: tabCarte[i] = carte.substring(beginIndex, endIndex).toCharArray();
 			beginIndex = beginIndex + largeur + 1; // +1 parce que ya virgule qu'on veut pas recuperer gros naze
 			endIndex = endIndex + largeur + 1;
-			//System.out.println(tabCarte[i]); pour tester
+			// System.out.println(tabCarte[i]); // pour tester
 		}
 	}
 	
