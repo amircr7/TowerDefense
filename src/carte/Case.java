@@ -1,20 +1,19 @@
 package carte;
+
+
 import java.awt.Image;
 
 
 
 import java.awt.image.BufferedImage;
+import java.io.IOException;
 import java.sql.*;
 
 public class Case {
 	
 	protected Image image;
-	protected Boolean vide;
+	protected int statut;
 	
-	public Case(){
-		image = null;
-		vide = null;
-	}
 	
 	public static String recuperationStringCarte (int idCarte) {
 		String url = "jdbc:mysql://localhost:3306/towerdefense";
@@ -59,25 +58,34 @@ public class Case {
 			//System.out.println(tabCarte[i]); // pour tester
 		}
 	}
-	public Case(Image image, int statut){
-		switch(statut){
-		
-		case 0 : 
-		EmplacementTour();
-		break;
-		case 1 :
-		Chemin();
-		break;
-		case 2 :
-		AssaillantSpawn();
-		break;
-		case 3 :
-		EmplacementPosteTravail();
-		break;
-		case 4 :
-		Decors();
-		break;
-		}
+	public Case(Image image){
+		this.image = image;
+	
+	
 	}
+		
+		
+		
+		
+	private Case[][] construireCase(char tabCarte[][], Case tabCase[][]) {
+		for(int x = 0; x < 20; x++){
+			for(int y = 0; y < 20; y++){
+				switch (tabCarte[x][y]){
 
+				case 0 : 
+					tabCase[x][y] = new EmplacementTour(image);
+				case 1 :
+					tabCase[x][y] = new Chemin(image);
+				case 2 :
+					tabCase[x][y] = new AssaillantSpawn(image);
+				case 3 :
+					tabCase[x][y] = new EmplacementPosteTravail(image);
+				case 4 :
+					tabCase[x][y] = new Decors(image);
+				}
+			}
+		}
+		return tabCase;
+
+	}
 }
