@@ -15,7 +15,7 @@ public class Case {
 	protected int statut;
 	
 	
-	public static String recuperationStringCarte (int idCarte) {
+	public static String recuperationStringCarte (Object idCarte) {
 		String url = "jdbc:mysql://localhost:3306/towerdefense";
 		String utilisateur = "root";
 		String motDePasse = "";
@@ -55,7 +55,7 @@ public class Case {
 			// pareil en plus court: tabCarte[i] = carte.substring(beginIndex, endIndex).toCharArray();
 			beginIndex = beginIndex + largeur + 1; // +1 parce que ya virgule qu'on ne veut pas recuperer
 			endIndex = endIndex + largeur + 1;
-			//System.out.println(tabCarte[i]); // pour tester
+			System.out.println(tabCarte[i]); // pour tester
 		}
 	}
 	public Case(Image image){

@@ -12,6 +12,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+import carte.Case;
+
 public class FenetreParametres extends JFrame{
 	
 	/**
@@ -23,7 +25,7 @@ public class FenetreParametres extends JFrame{
 	    
 		// Création des parametres de la fenetre	
 		this.setTitle("Paramètres");
-	    this.setSize(300, 150); //largeur , hauteur
+	    this.setSize(300, 140); //largeur , hauteur
 	    this.setLocationRelativeTo(null);
 	    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	    this.setResizable(false);
@@ -33,7 +35,7 @@ public class FenetreParametres extends JFrame{
 	  //Création zone texte pour nom
 	    JPanel panNorth = new JPanel();
 	    JLabel labelNom = new JLabel("Entrez votre nom ---> ");
-	    JTextField nomUtilisateur = new JTextField("");
+	    JTextField nomUtilisateur = new JTextField("Michel Sapin");
 	    nomUtilisateur.setPreferredSize(new Dimension(100, 20));
 	    panNorth.add(labelNom);
 	    panNorth.add(nomUtilisateur);
@@ -43,11 +45,11 @@ public class FenetreParametres extends JFrame{
 	    //Création choix carte
 	    JPanel panCenter = new JPanel();
 	    JLabel labelCarte = new JLabel("Choisissez votre carte ---> ");
-	    JComboBox<String> choixCarte = new JComboBox<String>();
+	    JComboBox<Integer> choixCarte = new JComboBox<Integer>();
 	    choixCarte.setPreferredSize(new Dimension(100, 20));
-	    choixCarte.addItem("Carte 1");
-	    choixCarte.addItem("Carte 2");
-	    choixCarte.addItem("Carte 3");
+	    choixCarte.addItem(1);
+	    choixCarte.addItem(2);
+	    choixCarte.addItem(3);
 	    panCenter.add(labelCarte);
 	    panCenter.add(choixCarte);
 	    this.getContentPane().add(panCenter, BorderLayout.CENTER);
@@ -64,8 +66,9 @@ public class FenetreParametres extends JFrame{
 	    {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				// String nomJeur = nomUtilisateur.getText(); enregistrer le nom du joueur dans un String
-				
+				//String nomJoueur = nomUtilisateur.getText(); enregistrer le nom du joueur dans un String
+				//String carte =Case.recuperationStringCarte(choixCarte.getSelectedItem());
+				//Case.StringToTab(carte);
 			}
 	    });
 	    annuler.addActionListener(new ActionListener()
