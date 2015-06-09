@@ -1,8 +1,8 @@
 package jeu;
 
-import interfaceJeu.AffichageFenetre;
-import carte.Case;
-import interfaceJeu.Affichage;
+//import interfaceJeu.AffichageFenetre;
+//import carte.Case;
+//import interfaceJeu.Affichage;
 
 public class TowerDefense {
 	
@@ -12,7 +12,7 @@ public class TowerDefense {
 		//AffichageFenetre fen = new AffichageFenetre(0, 0, null);
 		//String carte =Case.recuperationStringCarte(2);
 		//Case.StringToTab(carte);
-		
+		FenetreParametres fenetreParametres = new FenetreParametres();
 	}
 
 }
