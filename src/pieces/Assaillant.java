@@ -5,7 +5,7 @@ import java.util.Random;
 
 public abstract class Assaillant {
 	protected String enemyName;
-	protected int enemyHealth, enemyDamage, enemyRange, enemyResistance, dropRessources;
+	protected int IDenemy, enemyHealth, enemyDamage, enemyRange, enemyResistance, dropRessources;
 	protected double enemySpeed, damageSpeed;
 	protected double slowResistance, freezeResistance;
 	protected static int nombreAssaillant = 5;

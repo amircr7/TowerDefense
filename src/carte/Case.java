@@ -25,7 +25,7 @@ public class Case {
     	        } catch ( SQLException ignore ) {
     	        }
     	}	
-		// System.out.println(carte); // pour tester
+		//System.out.println(carte); // pour tester
 		return carte;
 	}
 	
@@ -42,9 +42,9 @@ public class Case {
 			tabCarte1d_temp = temp.toCharArray();
 			tabCarte[i] = tabCarte1d_temp;
 			// pareil en plus court: tabCarte[i] = carte.substring(beginIndex, endIndex).toCharArray();
-			beginIndex = beginIndex + largeur + 1; // +1 parce que ya virgule qu'on veut pas recuperer gros naze
+			beginIndex = beginIndex + largeur + 1; // +1 parce que ya virgule qu'on ne veut pas recuperer
 			endIndex = endIndex + largeur + 1;
-			// System.out.println(tabCarte[i]); // pour tester
+			System.out.println(tabCarte[i]); // pour tester
 		}
 	}
 	
