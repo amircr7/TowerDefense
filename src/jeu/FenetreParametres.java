@@ -76,6 +76,7 @@ public class FenetreParametres extends JFrame{
 				String carte = Case.recuperationStringCarte(partie.choixCarte); //Récupère la carte choisie dans la BDD
 				Case cases = new Case();
 				cases.stringToTab(carte); //Convertie la carte choisie en tableau 2D
+				setVisible(false);
 				try {
 					AffichageFenetre fen = new AffichageFenetre(0, 0, null, cases.construireCase() );
 				} catch (IOException e) {

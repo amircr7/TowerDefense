@@ -45,6 +45,7 @@ public class FenetreNewChargeGame extends JFrame{
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				Partie partie = new Partie();
+				setVisible(false);
 				FenetreParametres fenetre = new FenetreParametres(partie);
 			}});
 		
@@ -53,6 +54,8 @@ public class FenetreNewChargeGame extends JFrame{
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				//charger partie
+				//setVisible(false);
+				//derniere action charger partie
 			}});
 		this.setVisible(true);
 	}
