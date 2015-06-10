@@ -1,10 +1,13 @@
 package carte;
-import java.awt.Image;
-import java.io.IOException;
-public class Decors extends Case{
-	
-	public Decors(Image image){
-		super(image, 4);
 
-}
+import java.awt.Image;
+import java.io.File;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
+
+public class Decors extends Case{
+	public Decors()throws IOException{ 
+	super(ImageIO.read(new File ("Images/chemin.jpg")));
+	}
 }

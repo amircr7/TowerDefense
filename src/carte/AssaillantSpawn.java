@@ -1,10 +1,13 @@
 package carte;
 import java.awt.Image;
+import java.io.File;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
 
 public class AssaillantSpawn extends Case{
 
-public AssaillantSpawn(Image image){
-	super(image, 2);
+public AssaillantSpawn() throws IOException{
+	super(ImageIO.read(new File ("Images/vortex.jpg")));
 }
-
 }

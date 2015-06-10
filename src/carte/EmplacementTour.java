@@ -1,10 +1,14 @@
 package carte;
 
 import java.awt.Image;
+import java.io.File;
+import java.io.IOException;
 
-public class EmplacementTour extends Case{
+import javax.imageio.ImageIO;
 
-public EmplacementTour(Image image){
-	super(image, 0);
-}
+public class EmplacementTour extends Case {
+
+	public EmplacementTour() throws IOException {
+		super(ImageIO.read(new File("Images/sol.jpg")));
+	}
 }
