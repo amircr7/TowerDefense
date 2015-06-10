@@ -15,6 +15,7 @@ public class Case {
 	Case tabCase[][];
 	char tabCarte[][];
 	
+	
 	public Case(){
 
 	}

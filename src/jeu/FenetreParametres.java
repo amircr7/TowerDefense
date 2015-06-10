@@ -86,7 +86,8 @@ public class FenetreParametres extends JFrame{
 				partie.choixCarte = (int) choixCarte.getSelectedItem();
 				//System.out.println(partie.choixCarte);
 				String carte = Case.recuperationStringCarte(partie.choixCarte); //Récupère la carte choisie dans la BDD
-				Case.StringToTab(carte); //Convertie la carte choisie en tableau 2D
+				Case cases = new Case();
+				cases.stringToTab(carte); //Convertie la carte choisie en tableau 2D
 			}
 	    });
 	    annuler.addActionListener(new ActionListener()
