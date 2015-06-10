@@ -16,15 +16,10 @@ public class TowerDefense {
 		
 		//AffichageFenetre fen = new AffichageFenetre(0, 0, null);
 		Partie partie = new Partie();
-		FenetreParametres fenetreParametres = new FenetreParametres(partie); //Lance fenetre de choix de la carte
-		/*try {
-			AffichageFenetre fen = new AffichageFenetre(0, 0, null, cases.construireCase() );
-		} catch (IOException e) {
+		FenetreParametres fenetre = new FenetreParametres(partie);
+		
 	
-			//e.printStackTrace();
-	}*/
+	}
 		
 		
 	}
-
-}

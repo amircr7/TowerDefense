@@ -1,9 +1,12 @@
 package jeu;
 
+import interfaceJeu.AffichageFenetre;
+
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -12,14 +15,12 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.JRadioButton;
+import javax.swing.ButtonGroup;
 
 import carte.Case;
 
 public class FenetreParametres extends JFrame{
 	
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -2298298089373714925L;
 
 	public FenetreParametres(Partie partie){
@@ -37,9 +38,13 @@ public class FenetreParametres extends JFrame{
 	    JPanel panNorth = new JPanel();
 	    JRadioButton radioNew = new JRadioButton("Nouvelle Partie");
 	    JRadioButton radioCharge = new JRadioButton("Charger Partie");
+	    ButtonGroup bg = new ButtonGroup();
+	    bg.add(radioNew);
+	    bg.add(radioCharge);
 	    panNorth.add(radioNew);
 	    panNorth.add(radioCharge);
 	    this.getContentPane().add(panNorth, BorderLayout.NORTH);
+	    radioNew.addActionListener(new StateListener());
 	    
 	    
 	    //Création Panel nom + choix carte
@@ -88,8 +93,11 @@ public class FenetreParametres extends JFrame{
 				String carte = Case.recuperationStringCarte(partie.choixCarte); //Récupère la carte choisie dans la BDD
 				Case cases = new Case();
 				cases.stringToTab(carte); //Convertie la carte choisie en tableau 2D
-			}
-	    });
+				try {
+					AffichageFenetre fen = new AffichageFenetre(0, 0, null, cases.construireCase() );
+				} catch (IOException e) {
+				}
+			}});
 	    annuler.addActionListener(new ActionListener()
 	    {
 			@Override

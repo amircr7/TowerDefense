@@ -8,6 +8,6 @@ import javax.imageio.ImageIO;
 
 public class Decors extends Case{
 	public Decors()throws IOException{ 
-	super(ImageIO.read(new File ("Images/chemin.jpg")));
+	super(ImageIO.read(new File ("Images/arbre.gif")));
 	}
 }
