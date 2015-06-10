@@ -15,8 +15,9 @@ public class TowerDefense {
 	public static void main(String[] args) {
 		
 		//AffichageFenetre fen = new AffichageFenetre(0, 0, null);
-		Partie partie = new Partie();
-		FenetreParametres fenetre = new FenetreParametres(partie);
+		FenetreNewChargeGame fenetreGame = new FenetreNewChargeGame();
+		//Partie partie = new Partie();
+		//FenetreParametres fenetre = new FenetreParametres(partie);
 		
 	
 	}

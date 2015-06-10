@@ -27,24 +27,11 @@ public class FenetreParametres extends JFrame{
 		
 		// Création des parametres de la fenetre	
 		this.setTitle("Paramètres");
-	    this.setSize(300, 200); //largeur , hauteur
+	    this.setSize(300, 150); //largeur , hauteur
 	    this.setLocationRelativeTo(null);
 	    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	    this.setResizable(false);
 	    this.setLayout(new BorderLayout());
-	    
-	    
-	    //Création choix nouvelle partie ou charger partie
-	    JPanel panNorth = new JPanel();
-	    JRadioButton radioNew = new JRadioButton("Nouvelle Partie");
-	    JRadioButton radioCharge = new JRadioButton("Charger Partie");
-	    ButtonGroup bg = new ButtonGroup();
-	    bg.add(radioNew);
-	    bg.add(radioCharge);
-	    panNorth.add(radioNew);
-	    panNorth.add(radioCharge);
-	    this.getContentPane().add(panNorth, BorderLayout.NORTH);
-	    radioNew.addActionListener(new StateListener());
 	    
 	    
 	    //Création Panel nom + choix carte
@@ -87,9 +74,7 @@ public class FenetreParametres extends JFrame{
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				partie.setNomJoueur(nomUtilisateur.getText()); //enregistrer le nom du joueur dans un String
-				//System.out.println(choixCarte.getSelectedItem());
-				partie.choixCarte = (int) choixCarte.getSelectedItem();
-				//System.out.println(partie.choixCarte);
+				partie.choixCarte = (int) choixCarte.getSelectedItem(); //converti le choix de la carte en int
 				String carte = Case.recuperationStringCarte(partie.choixCarte); //Récupère la carte choisie dans la BDD
 				Case cases = new Case();
 				cases.stringToTab(carte); //Convertie la carte choisie en tableau 2D
