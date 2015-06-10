@@ -1,14 +1,5 @@
 package jeu;
 
-import java.io.IOException;
-import interfaceJeu.AffichageFenetre;
-import carte.Case;
-import interfaceJeu.Affichage;
-import jeu.FenetreParametres;
-
-import interfaceJeu.AffichageFenetre;
-import interfaceJeu.Affichage;
-import carte.*;
 public class TowerDefense {
 
 
@@ -16,8 +7,6 @@ public class TowerDefense {
 		
 		//AffichageFenetre fen = new AffichageFenetre(0, 0, null);
 		FenetreNewChargeGame fenetreGame = new FenetreNewChargeGame();
-		//Partie partie = new Partie();
-		//FenetreParametres fenetre = new FenetreParametres(partie);
 		
 	
 	}
