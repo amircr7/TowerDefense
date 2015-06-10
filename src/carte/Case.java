@@ -15,7 +15,7 @@ public class Case {
 	protected int statut;
 	
 	
-	public static String recuperationStringCarte (Object idCarte) {
+	public static String recuperationStringCarte (int idCarte) {
 		String url = "jdbc:mysql://localhost:3306/towerdefense";
 		String utilisateur = "root";
 		String motDePasse = "";
@@ -58,6 +58,8 @@ public class Case {
 			System.out.println(tabCarte[i]); // pour tester
 		}
 	}
+	
+	
 	public Case(Image image){
 		this.image = image;
 	
