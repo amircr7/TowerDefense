@@ -1,5 +1,5 @@
 package jeu; 
 
-public interface InterfaceUtilisateur {
+public interface interfacewtf {
 	
 }
